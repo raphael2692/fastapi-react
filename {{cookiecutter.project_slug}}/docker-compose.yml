@@ -32,7 +32,7 @@ services:
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: {{cookiecutter.pgadmin_email}}
-      PGADMIN_DEFAULT_PASSWORD: {{cookiecutter.pgdmin_password}}
+      PGADMIN_DEFAULT_PASSWORD: {{cookiecutter.pgadmin_password}}
     ports:
       - '5050:80'
     # remeber to setup initial postgres server and sethup his hostname with the value below:
