@@ -2,10 +2,13 @@
   "project_slug": "fastapi-react-project",
   "project_name": "{{ cookiecutter.project_slug }}",
   "port": "8000",
-  "postgres_user": "postgres",
-  "postgres_password": "password",
+  "postgres_user": "root",
+  "postgres_password": "root",
   "postgres_database": "app",
   "superuser_email": "admin@{{cookiecutter.project_name}}.com",
-  "superuser_password": "password",
-  "secret_key": "super_secret"
+  "superuser_password": "root",
+  "secret_key": "root",
+  "pgdmin_user": "root",
+  "pgdmin_password": "root",
+  "pgadmin_server_hostname": "root"
 }
