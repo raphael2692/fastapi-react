@@ -31,7 +31,7 @@ services:
     image: dpage/pgadmin4
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: {{cookiecutter.pgdmin_user}}
+      PGADMIN_DEFAULT_EMAIL: {{cookiecutter.pgadmin_email}}
       PGADMIN_DEFAULT_PASSWORD: {{cookiecutter.pgdmin_password}}
     ports:
       - '5050:80'
@@ -47,7 +47,7 @@ services:
     build:
       context: backend
       dockerfile: Dockerfile
-    command: celery --app app.tasks worker --loglevel=DEBUG -Q main-queue -c 1
+    command: celery --app app.tasks worker --loglevel=INFO -Q main-queue -c 1
 
   flower:  
     image: mher/flower
