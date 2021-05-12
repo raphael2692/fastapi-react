@@ -8,7 +8,7 @@
   "superuser_email": "admin@{{cookiecutter.project_name}}.com",
   "superuser_password": "root",
   "secret_key": "root",
-  "pgdmin_user": "root",
+  "pgdmin_email": "admin@{{cookiecutter.project_name}}.com",
   "pgdmin_password": "root",
   "pgadmin_server_hostname": "root"
 }
