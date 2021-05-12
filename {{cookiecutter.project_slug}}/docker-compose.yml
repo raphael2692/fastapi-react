@@ -34,10 +34,13 @@ services:
       PGADMIN_DEFAULT_EMAIL: {{cookiecutter.pgdmin_user}}
       PGADMIN_DEFAULT_PASSWORD: {{cookiecutter.pgdmin_user}}
     ports:
-      - "5050:80"
+      - '5050:80'
     # remeber to setup initial postgres server and sethup his hostname with the value below:
     links:
       - "postgres:{{cookiecutter.pgadmin_server_hostname}}" 
+      
+    depends_on:
+      - 'postgres'
   
   worker:
     build:
