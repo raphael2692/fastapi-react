@@ -38,9 +38,10 @@ services:
     # remeber to setup initial postgres server and sethup his hostname with the value below:
     links:
       - "postgres:{{cookiecutter.pgadmin_server_hostname}}" 
-      
     depends_on:
       - 'postgres'
+    logging:
+      driver: none
   
   worker:
     build:
